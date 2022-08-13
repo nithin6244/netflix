@@ -1,0 +1,38 @@
+@use "../abstracts/mixins" as *;
+
+$margin: 0px 5px 0px 0px;
+$header-color: black;
+$light-color: hsl(0, 0%, 100%);
+
+.header {
+      background-color: $header-color;
+      height: 60px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+            rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      padding: 0px 30px;
+
+      &__wrapper {
+            @include flex;
+            justify-content: space-between;
+            height: inherit;
+      }
+
+      &__left,
+      &__middle,
+      &__right {
+            @include flex;
+            align-items: center;
+      }
+
+      &__heading {
+            color: $light-color;
+            font-size: 1.25rem;
+      }
+
+      &__left {
+            img {
+                  height: 70px;
+                  width: 100%;
+            }
+      }
+}
